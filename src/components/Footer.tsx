@@ -1,18 +1,21 @@
 // components/Footer.tsx
 "use client";
 
+import Image from "next/image";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative z-10 mt-8 border-t border-white/5/50 bg-black/10 backdrop-blur-xl">
+    <footer className="relative z-10 mt-8 border-t border-white/5/50 bg-black/10 glass-container">
       <div className="max-w-6xl mx-auto px-4 py-6 md:py-8">
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
           {/* Brand + tagline */}
           <div className="text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
               <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-tr from-yellow-400 to-orange-500 shadow-md shadow-yellow-500/30">
-                <i className="fas fa-sun text-gray-900 text-sm" />
+                <Image src="/icon.svg" alt="AuraWeather Logo" width={20} height={20}
+                 />
               </span>
               <span className="text-lg font-semibold tracking-tight">
                 AuraWeather
@@ -49,14 +52,13 @@ export default function Footer() {
                 Gemini AI
               </a>
             </p>
-            <p className="text-white/40">Built with Next.js, TypeScript & Tailwind.</p>
           </div>
 
           {/* Social / links */}
           <div className="flex flex-col items-center md:items-end gap-3 text-xs text-white/60">
             <div className="flex items-center gap-3">
               <a
-                href="https://github.com"
+                href="https://github.com/rohitdatkhile7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="glass-item flex items-center justify-center h-9 w-9 text-white/70 hover:text-white transition-colors"
@@ -74,7 +76,7 @@ export default function Footer() {
                 <i className="fab fa-twitter text-base" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/rohit-datkhile-b201a8244/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="glass-item flex items-center justify-center h-9 w-9 text-blue-300 hover:text-blue-200 transition-colors"
